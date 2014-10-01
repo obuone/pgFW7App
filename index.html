@@ -1,100 +1,243 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Required meta tags-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>My App</title>
+    <!-- Your app title -->
+    <title>RestoFever</title>
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="css/framework7.min.css">
+    <!-- Path to Framework7 Theme CSS-->
+    <link rel="stylesheet" href="css/framework7.themes.css">	
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="css/my-app.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
   <body>
-    <!-- Status bar overlay for fullscreen mode-->
-    <div class="statusbar-overlay"></div>
-    <!-- Panels overlay-->
+    <!-- First, we need to add Panel's overlay that will overlays app while panel is opened -->
     <div class="panel-overlay"></div>
-    <!-- Left panel with reveal effect-->
-    <div class="panel panel-left panel-reveal">
-      <div class="content-block">
-        <p>Left panel content goes here</p>
-      </div>
-    </div>
-    <!-- Right panel with cover effect-->
-    <div class="panel panel-right panel-cover">
-      <div class="content-block">
-        <p>Right panel content goes here</p>
-      </div>
-    </div>
-    <!-- Views-->
-    <div class="views">
-      <!-- Your main view, should have "view-main" class-->
+    <!-- Left panel, let it be with reveal effect -->
+    <div class="panel panel-left panel-reveal layout-dark">
+        <div class="view view-left" data-page="panel-left">
+		<div class="navbar">
+          <div class="navbar-inner">
+              <div class="left"><img src="https://graph.facebook.com/588511009/picture?width=40" class="user-avatar"></div>
+              <div class="center">Obuone</div>
+              <div class="right"><i class="fa fa-cogs"></i></div>
+          </div>
+        </div>
+		<div class="pages navbar-through">
+		<div class="page" data-page="panel-left1">
+		<div class="page-content">
+        <div class="list-block">
+          <ul>
+            <li>
+            <a href="http://newlook.obuone.be/lio-loved" class="item-link item-content close-panel no-animation" data-ignoreCache="true">
+              <div class="item-media"><i class="fa fa-star" style="color:white"></i></div>
+              <div class="item-inner">
+                <div class="item-title">Loved restaurants</div>
+                <div class="item-after"><span class="badge" style="background-color:#007aff">05</span></div>
+              </div>
+            </a>
+            </li>
+            <li>
+            <a href="#" class="item-link item-content">
+              <div class="item-media"><i class="fa fa-inbox" style="color:white"></i></div>
+              <div class="item-inner">
+                <div class="item-title">To-Do restaurants</div>
+                <div class="item-after"><span class="badge" style="background-color:#007aff">10</span></div>
+              </div>
+            </a>
+            </li>
+            <li>
+            <a href="#" class="item-link item-content">
+              <div class="item-media"><i class="fa fa-check-square-o" style="color:white"></i></div>
+              <div class="item-inner">
+                <div class="item-title">Done restaurants</div>
+                <div class="item-after"><span class="badge" style="background-color:#007aff">10</span></div>
+              </div>
+            </a>
+            </li>
+          </ul>
+        </div>
+        <div class="list-block">
+          <!-- First group-->
+          <div class="list-group">
+            <ul>
+              <li class="list-group-title">My Lists</li>
+              <li class="item-content">
+                <div class="item-media"><i class="fa fa-file" style="color:white"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">
+                    <div class="item-input">
+                      <input type="text" placeholder="New List ...">
+                    </div>
+                  </div>
+                  <div class="item-after"><i class="fa fa-check"></i></div>
+                </div>
+              </li>
+              <li>
+                <a href="#" class="item-link item-content">
+                <div class="item-media"><i class="fa fa-file" style="color:white"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">Une super liste</div>
+                  <div class="item-after"><span class="badge" style="background-color:#007aff">02</span></div>
+                </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="item-link item-content">
+                <div class="item-media"><i class="fa fa-file" style="color:white"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">Une autre liste</div>
+                  <div class="item-after"><span class="badge" style="background-color:#007aff">22</span></div>
+                </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="list-group">
+            <ul>
+              <li class="list-group-title">Followed Lists</li>
+              <li>
+                <a href="#" class="item-link item-content">
+                <div class="item-media"><i class="fa fa-eye" style="color:white"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">La liste de lio</div>
+                  <div class="item-after"><span class="badge" style="background-color:#007aff">02</span></div>
+                </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="list-group">
+            <ul>
+              <li class="list-group-title">Cities</li>
+              <li>
+                <a href="#" class="item-link item-content">
+                <div class="item-media"><i class="fa fa-map-marker" style="color:white"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">Boston</div>
+                  <div class="item-after"><span class="badge" style="background-color:#007aff">03</span></div>
+                </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="item-link item-content">
+                <div class="item-media"><i class="fa fa-map-marker" style="color:white"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">Montreal</div>
+                  <div class="item-after"><span class="badge" style="background-color:#007aff">12</span></div>
+                </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="item-link item-content">
+                <div class="item-media"><i class="fa fa-map-marker" style="color:white"></i></div>
+                <div class="item-inner">
+                  <div class="item-title">Brussels</div>
+                  <div class="item-after"><span class="badge" style="background-color:#007aff">25</span></div>
+                </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+		</div>
+		</div>
+		</div>
+		</div>
+	</div>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+    <!-- Views -->
+    <div class="views layout-white">
+      <!-- Your main view, should have "view-main" class -->
       <div class="view view-main">
         <!-- Top Navbar-->
         <div class="navbar">
           <div class="navbar-inner">
-            <!-- We have home navbar without left link-->
-            <div class="center sliding">Awesome App</div>
-            <div class="right">
-              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"><i class="icon icon-bars-blue"></i></a>
+            <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+            <div class="left">
+              <a href="#" class="link icon-only open-panel">
+                  <i class="icon icon-bars"></i>
+              </a>
             </div>
+            <div class="center sliding">All Restaurants</div>
+			<div class="right"><i class="fa fa-search"></i></div>
           </div>
         </div>
-        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
         <div class="pages navbar-through toolbar-through">
-          <!-- Page, data-page contains page name-->
+          <!-- Page, "data-page" contains page name -->
           <div data-page="index" class="page">
-            <!-- Scrollable page content-->
+            <!-- Scrollable page content -->
+			<form class="searchbar" data-search-list=".list-block-search" data-search-in=".item-title" data-searchbar-found=".searchbar-found" data-searchbar-not-found=".searchbar-not-found">
+				<div class="searchbar-input">
+					<input type="search" placeholder="Search">
+					<a href="#" class="searchbar-clear"></a>
+				</div>
+				<a href="#" class="searchbar-cancel">Cancel</a>
+			</form>
+			<div class="searchbar-overlay"></div>
             <div class="page-content">
-              <div class="content-block-title">Welcome To My Awesome App</div>
-              <div class="content-block">
-                <div class="content-block-inner">
-                  <p>Couple of worlds here because my app is so awesome!</p>
-                  <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
+				<div class="content-block searchbar-not-found">
+						Nothing found
+				</div>
+                <div class="list-block media-list sortable list-block-search searchbar-found">
+                  <ul>
+                    <li>
+                      <a href="restaurant.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-media"><img src="https://irs1.4sqi.net/img/general/44x44/30937354_38BNCC5GcUKZKy7Mz00txqF_RhbD9_Qx9611Y5MSxZo.jpg" width="44px"></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">Aux Petits Oignons</div>
+                          </div>
+                          <div class="item-subtitle">Chaussée de Tirlemont 260</div>
+                        </div>
+                      </div>
+                      </a>
+                      <div class="sortable-handler"></div>
+                    </li>
+                    <li>
+                      <a href="restaurant.html" class="item-link">
+					  <div class="item-content">
+                        <div class="item-media"><img src="https://irs1.4sqi.net/img/general/300x300/30937354_38BNCC5GcUKZKy7Mz00txqF_RhbD9_Qx9611Y5MSxZo.jpg" width="44"></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">Blue Submarine</div>
+                          </div>
+                          <div class="item-subtitle">Beatles</div>
+                        </div>
+                      </div>
+					  </a>
+                      <div class="sortable-handler"></div>
+                    </li>
+                    <li>
+                      <a href="restaurant.html" class="item-link">
+					  <div class="item-content">
+                        <div class="item-media"><img src="https://irs1.4sqi.net/img/general/300x300/30937354_38BNCC5GcUKZKy7Mz00txqF_RhbD9_Qx9611Y5MSxZo.jpg" width="44"></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">Green Submarine</div>
+                          </div>
+                          <div class="item-subtitle">Beatles</div>
+                        </div>
+                      </div>
+					  </a>
+                      <div class="sortable-handler"></div>
+                    </li>
+                  </ul>
                 </div>
-              </div>
-              <div class="content-block-title">What about simple navigation?</div>
-              <div class="list-block">
-                <ul>
-                  <li><a href="about.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="item-title">About</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="services.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="item-title">Services</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="form.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-inner">
-                          <div class="item-title">Form</div>
-                        </div>
-                      </div></a></li>
-                </ul>
-              </div>
-              <div class="content-block-title">Side panels</div>
-              <div class="content-block">
-                <div class="row">
-                  <div class="col-50"><a href="#" data-panel="left" class="button open-panel">Left Panel</a></div>
-                  <div class="col-50"><a href="#" data-panel="right" class="button open-panel">Right Panel</a></div>
-                </div>
-              </div>
             </div>
           </div>
-        </div>
-        <!-- Bottom Toolbar-->
-        <div class="toolbar">
-          <div class="toolbar-inner"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="cordova.js"></script>
     <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="js/framework7.min.js"></script>
     <!-- Path to your app js-->
